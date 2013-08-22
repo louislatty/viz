@@ -1,0 +1,21 @@
+# -*- coding:utf-8; mode:yaml; -*-
+
+#
+# do not change this file to set local options, instead, create
+# local_config.yml with options that need to be overriden.
+#
+
+:development:
+  :client_id: ''
+  :client_secret: ''
+  :rack_cookie_secret: ''
+
+:production:
+  :client_id: ''
+  :client_secret: ''
+  :rack_cookie_secret: ''
+
+:test:
+  :client_id: ''
+  :client_secret: ''
+  :rack_cookie_secret: ''
