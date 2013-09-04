@@ -4,9 +4,11 @@
 require 'omniauth-google-oauth2'
 require 'sinatra/base'
 require 'sinatra/config_file'
+require 'sinatra/content_for'
 
 class App < Sinatra::Base
   register Sinatra::ConfigFile
+  helpers Sinatra::ContentFor
 
   AUTHORIZED_UIDS = ['111233800829108673907']
 

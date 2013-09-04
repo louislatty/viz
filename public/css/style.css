@@ -1,0 +1,39 @@
+/*-*- coding:utf-8; mode:css; -*-*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*[draggable=true] {
+    -moz-user-select:none;
+    -khtml-user-drag: element;
+    cursor: move;
+}
+
+.margin { margin: 1em; }
+.table { display: table; }
+.table-cell { display: table-cell; }
+.table-row { display: table-row; }
+li { list-style: none; }
+
+#mannequin {
+    background: url(/images/mannequin.png) top right no-repeat;
+    border: 1px solid #333333;
+    height: 350px;
+    position: relative;
+    vertical-align: top;
+    width: 200px;
+}
+#mannequin div {
+    position: absolute;
+}
+#shirt {
+    background: url(/images/shirt.png) top right no-repeat;
+    height: 236px;
+    width: 186px;
+}
+#shorts {
+    background: url(/images/shorts.png) top right no-repeat;
+    height: 160px;
+    width: 120px;
+}
