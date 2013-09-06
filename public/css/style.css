@@ -27,12 +27,12 @@ li { list-style: none; }
 #mannequin div {
     position: absolute;
 }
-#shirt {
+.shirt {
     background: url(/images/shirt.png) top right no-repeat;
     height: 236px;
     width: 186px;
 }
-#shorts {
+.shorts {
     background: url(/images/shorts.png) top right no-repeat;
     height: 160px;
     width: 120px;
