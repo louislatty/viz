@@ -1,0 +1,14 @@
+<!--*- coding:utf-8; mode:jinja2; -*-->
+
+<div class="table">
+  <a class="table-cell" href="" ng-click="rotate(-1)">&lt;</a>
+  <div class="mannequin-container table-cell"
+       style="background-position:{{background_position({id:'mannequin'})}}">
+    <div class="{{item[0].id}}"
+         draggable="true"
+         id="_{{item[0].id}}"
+         style="background-position:{{background_position(item[0])}}"
+         ng-repeat="item in items_moved"></div>
+  </div>
+  <a class="table-cell" href="" ng-click="rotate(1)">&gt;</a>
+</div>
