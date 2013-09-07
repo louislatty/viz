@@ -9,14 +9,10 @@
     -khtml-user-drag: element;
     cursor: move;
 }
-
-.margin { margin: 1em; }
-.table { display: table; }
-.table-cell { display: table-cell; }
-.table-row { display: table-row; }
-li { list-style: none; }
-
-#mannequin {
+li {
+    list-style: none;
+}
+.mannequin-container {
     background: url(/images/mannequin.png) top right no-repeat;
     border: 1px solid #333333;
     height: 350px;
@@ -24,8 +20,11 @@ li { list-style: none; }
     vertical-align: top;
     width: 200px;
 }
-#mannequin div {
+.mannequin-container div {
     position: absolute;
+}
+.margin {
+    margin: 1em;
 }
 .shirt {
     background: url(/images/shirt.png) top right no-repeat;
@@ -36,4 +35,14 @@ li { list-style: none; }
     background: url(/images/shorts.png) top right no-repeat;
     height: 160px;
     width: 120px;
+}
+.table {
+    display: table;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: top;
+}
+.table-row {
+    display: table-row;
 }

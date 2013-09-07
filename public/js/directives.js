@@ -126,11 +126,47 @@
      };
  })
  .directive('mannequin', function () {
-     function link(scope, el, attrs, garmentsContr) {
-         el.bind('dragenter', on_dragenter(scope));
-         el.bind('dragleave', on_dragleave(scope));
-         el.bind('dragover', on_dragover(scope));
-         el.bind('drop', on_drop(scope, el, garmentsContr));
+     function add_mod(value, delta, count) {
+         var n = (value + delta) % count;
+         return n < 0 ? count + n : n;
+     }
+
+     function find_container(element) {
+         var container = element;
+
+         angular.forEach(element.find('div'), function (x) {
+             var el = angular.element(x);
+
+             if (el.hasClass('mannequin-container')) {
+                 container = el;
+             }
+         });
+         return container;
+     }
+
+     function link(scope, element, attrs, garmentsContr) {
+         var container = find_container(element);
+
+         container.bind('dragenter', on_dragenter(scope));
+         container.bind('dragleave', on_dragleave(scope));
+         container.bind('dragover', on_dragover(scope));
+         container.bind('drop', on_drop(scope, element, garmentsContr));
+
+         scope.frame_num = 0;
+
+         scope.background_position = function (item) {
+             var id = item.id.substring(0, 1) === '_' ? item.id.slice(1) : item.id;
+             var positions = {
+                 'mannequin': ['-5px -5px', '-36px -5px', '-67px -5px'],
+                 'shirt': ['-5px -5px', '-201px -5px', '-5px -251px'],
+                 'shorts': ['-5px -5px', '-135px -5px', '-5px -175px']
+             };
+             var xs = positions[id];
+             return xs ? xs[scope.frame_num] : '';
+         };
+         scope.rotate = function (delta) {
+             scope.frame_num = add_mod(scope.frame_num, delta, 3);
+         };
      }
 
      function on_dragenter(scope) {
@@ -170,7 +206,7 @@
          link: link,
          restrict: 'A',
          require: '^garments',
-         template: '<div ng-repeat="item in items_moved" class="{{item[0].id}}" draggable="true" id="_{{item[0].id}}"></div>'
+         templateUrl: 'templates/mannequin.html'
      };
  })
 );
