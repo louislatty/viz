@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="fileUploadAngJS" lang-en>
+
+  <head>
+  	<title> File upload AngularJS </title>
+    <meta charset="utf-8"/>
+  	<link rel="stylesheet" type="text/css" href="file-upload.css">
+  </head>
+
+  <body>
+    <!-- Load AngularJS-->
+    <script type="text/javascript" src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+    <!-- Load Modernizr-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <!-- Load check for drag and drop support script 
+    <script type="text/javascript" src="dndSuprtCheck.js"></script> -->
+
+    <!-- Load file upload script-->
+    <script type="text/javascript" src="file-upload.js"></script> 
+    <!-- File upload element: drag-and-drop and browse -->
+    <accptfiles accptfiles-dnd accptfiles-browse accptfiles-upload>
+    </accptfiles>
+
+<!--     <input type="file" id="browsebutton-visbl1" multiple/>
+<script type="text/javascript"> 
+// window.onload=function(evt){window.document.getElementById('browsebutton-visbl1').click();}
+document.getElementById('browsebutton-visbl1').addEventListener('click2',function(evt){
+  window.document.getElementById('browsebutton-invisbl').click();;});
+var clickEvt=new Event('click2');
+document.getElementById('browsebutton-visbl1').dispatchEvent(clickEvt);
+</script>
+ -->
+
+  </body>
+
+</html>

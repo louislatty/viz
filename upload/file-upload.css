@@ -1,0 +1,117 @@
+ul
+{
+    list-style-type: none;
+
+}
+
+li
+{    display: inline-block;
+    font-size:70%;
+}
+
+/*.addFileText{
+  margin-left: 10%;
+  float: left;
+}
+*/
+
+/*.browseFileText{
+    margin-left: 10%;
+  float: left;
+}
+*/
+
+.dropzone{
+  background:Gainsboro;
+  /* DCDCDC */
+  /*color:DodgerBlue ;*/
+  color: #404040;
+  font-size: medium;
+}
+
+.fileName{
+/*  font-size:10%;
+*/}
+
+.removeBtn{
+    font-size:x-small;
+/*    opacity:0.6;
+    position: absolute;
+*/ 
+    white-space: nowrap;
+    overflow-x:hidden;
+    text-overflow:ellipsis;
+    width: 108px;
+    height: 19px;
+/*    bottom: 0%;
+    left: 0%;
+*/}
+
+.thumb {
+    border: 1px solid #000;
+    height: 75px;
+    width:108px;
+    margin: 10px 5px 0 0; 
+/*    position: relative;
+*/
+}
+
+.thumbContnr{
+  position: relative;
+}
+
+#browsebutton-invisbl {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+#browsebutton-visbl {
+  width: 100px;
+  height: 20px;
+  background:lightgray;
+  /*border:1px solid #000;*/
+  color:black;
+}
+
+#removeFileText{
+  /*text-align:right;*/
+  margin-right: 5%;
+  float: right;
+}
+
+#submitbutton{
+  width: 140px;
+  height: 20px;
+  background:lightgray;
+  color:black
+
+
+}
+
+
+/*.button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.button:before {
+  content: 'Select some files';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.button:hover:before {
+  border-color: black;
+}
+.button:active:before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}*/
+
